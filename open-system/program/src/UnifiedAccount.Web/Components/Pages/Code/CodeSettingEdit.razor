@@ -1,0 +1,69 @@
+@page "/code-settings/{CategoryCode}"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = "CodeSettingsEditor")]
+@using Microsoft.AspNetCore.Components.Authorization
+@using UnifiedAccount.Application.Services
+
+<PageTitle>コード設定</PageTitle>
+
+<div class="home-dashboard fade-in">
+    <div class="home-calendar-section">
+        <PageHeader Title="コード設定"
+                    Eyebrow="Configuration"
+                    Description="@GetCategoryDescription()" />
+
+        <div class="mock-card code-setting-edit-card">
+            @if (_category is not null)
+            {
+                <EditableGrid TItem="CodeSettingEditRowDraft"
+                              Items="VisibleRows.ToList()"
+                              EmptyMessage="編集対象データがありません。">
+                    <HeaderContent>
+                        <th>コード</th>
+                        <th>表示文字列</th>
+                        <th>表示順</th>
+                        <th>操作</th>
+                    </HeaderContent>
+                    <RowContent Context="row">
+                        <td><input class="form-control form-control-sm code-setting-edit-input" @bind="row.CodeValue" /></td>
+                        <td><input class="form-control form-control-sm code-setting-edit-input" @bind="row.DisplayText" /></td>
+                        <td><input class="form-control form-control-sm text-end code-setting-edit-input" @bind="row.DisplayOrderText" /></td>
+                        <td>
+                            <select class="form-select form-select-sm"
+                                    value="@row.DeleteAction"
+                                    @onchange="args => HandleDeleteActionChanged(row, args)">
+                                <option value="@CodeSettingDeleteAction.Empty"></option>
+                                <option value="@CodeSettingDeleteAction.Delete">削除</option>
+                            </select>
+                        </td>
+                    </RowContent>
+                </EditableGrid>
+            }
+            @if (_category is not null)
+            {
+
+                <div class="editable-grid__footer">
+                    <div class="code-setting-edit-card__footer">
+                        <div class="d-flex gap-2 flex-wrap">
+                            <button type="button" class="mock-btn mock-btn--primary" @onclick="RequestSaveAsync">保存</button>
+                            <button type="button" class="mock-btn" @onclick="CancelAsync">キャンセル</button>
+                        </div>
+                        <button type="button" class="mock-btn mock-btn--primary" @onclick="AddNewRow">新規追加</button>
+                    </div>
+                </div>
+            }
+        </div>
+        <MessageArea ErrorMessage="@_errorToast"
+                        SuccessMessage="@_successToast"
+                        OnErrorCleared="ClearErrorToast"
+                        OnSuccessCleared="ClearSuccessToast" />
+    </div>
+</div>
+
+<ConfirmDialog IsVisible="@_isConfirmDialogVisible"
+               Title="@_confirmTitle"
+               Message="@_confirmMessage"
+               ConfirmText="@_confirmText"
+               ConfirmButtonClass="@_confirmButtonClass"
+               OnConfirm="ConfirmAsync"
+               OnCancel="CancelConfirmationAsync" />

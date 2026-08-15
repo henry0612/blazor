@@ -1,0 +1,30 @@
+@* ステータスバッジ *@
+
+<span role="status" class="status-badge status-badge--@GetKindClass()">@Text</span>
+
+@code {
+    public enum StatusBadgeKind
+    {
+        Success,
+        Info,
+        Warning,
+        Danger,
+        Pending
+    }
+
+    [Parameter, EditorRequired] public StatusBadgeKind Kind { get; set; }
+    [Parameter, EditorRequired] public string Text { get; set; } = string.Empty;
+
+    private string GetKindClass()
+    {
+        return Kind switch
+        {
+            StatusBadgeKind.Success => "success",
+            StatusBadgeKind.Info => "info",
+            StatusBadgeKind.Warning => "warning",
+            StatusBadgeKind.Danger => "danger",
+            StatusBadgeKind.Pending => "pending",
+            _ => "info"
+        };
+    }
+}

@@ -1,0 +1,28 @@
+﻿@inherits LayoutComponentBase
+
+<div class="app-shell">
+    <header class="app-header">
+        <div class="app-header__left">
+            <button type="button" class="app-header__tweaks-button" aria-label="Design Tweaksの表示切り替え">B</button>
+            <h1 class="app-header__title">
+                統一口座システム
+                <span class="app-header__version">v1.0.0</span>
+            </h1>
+        </div>
+
+        <div class="app-header__right">
+            <div class="app-header__updated">最終更新: 2026/05/09 10:25:31</div>
+            <div class="app-header__avatar" aria-hidden="true">JD</div>
+        </div>
+    </header>
+
+    <aside class="sidebar">
+        <NavMenu />
+    </aside>
+
+    <main class="app-main">
+        <div class="app-main__body">
+            @Body
+        </div>
+    </main>
+</div>

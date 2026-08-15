@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocCreatorConf version="5.0" xmlns="http://schema.hos.co.jp/dcx/5.0/" creationTime="2026-07-07T18:17:59+09:00">
+  <DocCreator>
+    <FileOutJob jobName="RSI_1">
+      <Document type="BINARY" />
+    </FileOutJob>
+  </DocCreator>
+  <MappingTool>
+    <Property name="FieldOrder">
+      <Value>
+        <Property name="sample-detail" value="lstname,List1,List2" />
+      </Value>
+    </Property>
+  </MappingTool>
+  <RecordSet name="レコードセット1" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="JobExecutionId,ProcessingDate,CompanyCode,RequestType,ChangeAction,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,OfficeFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt" />
+  </RecordSet>
+  <RecordSet name="レコードセット2" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="JobExecutionId,ProcessingDate,CompanyCode,RequestType,ChangeAction,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,OfficeFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt" />
+  </RecordSet>
+  <RecordSet name="レコードセット3" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="JobExecutionId,ProcessingDate,CompanyCode,RequestType,ChangeAction,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,OfficeFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt" />
+  </RecordSet>
+  <Report name="レポート1" recordSet="レコードセット1">
+    <Form name="sample-detail" forcedOutput="FALSE">
+      <Layout valueAs="FILE" valueType="TEXT">sample-detail.cfx</Layout>
+      <DetailList name="lstname" direction="UTOD" recordSet="レコードセット1">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">CompanyCode</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">CompanyNameKana</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="List1" direction="UTOD" recordSet="レコードセット2">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">RequestType</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">Tel</Field>
+          <Field index="4" valueAs="DATA" valueType="SOURCE">CompanyCode</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="List2" direction="UTOD" recordSet="レコードセット3">
+        <DetailItem>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">ProcessingDate</Field>
+          <Field index="4" valueAs="DATA" valueType="SOURCE">ChangeAction</Field>
+        </DetailItem>
+      </DetailList>
+    </Form>
+  </Report>
+</DocCreatorConf>

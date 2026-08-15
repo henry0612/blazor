@@ -1,0 +1,150 @@
+@page "/code-settings"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = "CodeSettingsEditor")]
+@inject ICodeSettingService CodeSettingService
+@inject IAuditLogService AuditLogService
+@inject ILogger<CodeCategoryList> Logger
+@using Microsoft.AspNetCore.Components.Authorization
+@using UnifiedAccount.Application.Services
+
+<PageTitle>コード区分一覧</PageTitle>
+
+<div class="home-dashboard fade-in">
+    <div class="home-calendar-section">
+        <PageHeader Title="コード区分"
+                    Eyebrow="Configuration"
+                    ResultCount="_totalCount" />
+
+        <div class="mock-card code-category-list-card">
+            <div class="code-category-list-card__header">
+                <span class="small text-muted">区分一覧: @_totalCount 件</span>
+            </div>
+            <div class="table-responsive">
+                <QuickGrid TGridItem="CodeSettingDto"
+                           Theme="QuickGridTheme.neutral"
+                           ItemsProvider="LoadItemsAsync"
+                           Pagination="_pagination"
+                           Class="table align-middle mb-0 code-category-list-table mock-table"
+                           ItemKey="item => item.Id">
+                    <TemplateColumn Title="区分">
+                        @FormatTextValue(context.CodeValue)
+                    </TemplateColumn>
+                    <TemplateColumn Title="表示名">
+                        @FormatTextValue(context.DisplayText)
+                    </TemplateColumn>
+                    <TemplateColumn Title="表示順" Class="text-end">
+                        @FormatAmountValue(context.DisplayOrder)
+                    </TemplateColumn>
+                    <TemplateColumn Title="操作" Class="text-center">
+                        <a href="@GetDetailUrl(context)"
+                           aria-label="@($"編集: {context.CodeValue}")"
+                           class="code-category-list-link">
+                            編集
+                        </a>
+                    </TemplateColumn>
+                </QuickGrid>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-end mt-2">
+            <Paginator State="_pagination" />
+        </div>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter]
+    private Task<AuthenticationState> AuthenticationStateTask { get; set; } = default!;
+
+    private readonly PaginationState _pagination = new()
+    {
+        ItemsPerPage = 50
+    };
+
+    private int _totalCount;
+
+    private async ValueTask<GridItemsProviderResult<CodeSettingDto>> LoadItemsAsync(
+        GridItemsProviderRequest<CodeSettingDto> request)
+    {
+        try
+        {
+            var pageSize = request.Count ?? _pagination.ItemsPerPage;
+            var page = request.StartIndex / pageSize + 1;
+            var pageResult = await CodeSettingService.SearchAsync(
+                "00",
+                null,
+                page,
+                pageSize,
+                request.CancellationToken);
+
+            var authState = await AuthenticationStateTask;
+            await AuditLogService.WriteAsync(
+                CodeAuditLogEntryFactory.CreateSearchEntry(
+                    authState.User,
+                    "00",
+                    null,
+                    pageResult.Items.Count > 0),
+                request.CancellationToken);
+
+            _totalCount = pageResult.TotalCount;
+            return GridItemsProviderResult.From(pageResult.Items.ToArray(), pageResult.TotalCount);
+        }
+        catch (Exception ex)
+        {
+            Logger.LogError(ex, "Code category list load failed.");
+            _totalCount = 0;
+            throw;
+        }
+    }
+
+    private static string GetDetailUrl(CodeSettingDto item)
+    {
+        return $"/code-settings/{Uri.EscapeDataString(item.CodeValue)}";
+    }
+
+    private static string FormatTextValue(string? value)
+    {
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return string.Empty;
+        }
+
+        return value.Trim();
+    }
+
+    private static string FormatAmountValue(object? value)
+    {
+        if (value is null)
+        {
+            return string.Empty;
+        }
+
+        var text = value.ToString();
+        if (string.IsNullOrWhiteSpace(text))
+        {
+            return string.Empty;
+        }
+
+        if (value is int intValue)
+        {
+            return intValue.ToString("N0");
+        }
+
+        if (value is long longValue)
+        {
+            return longValue.ToString("N0");
+        }
+
+        if (value is decimal decimalValue)
+        {
+            return decimalValue.ToString("N0");
+        }
+
+        if (value is double doubleValue)
+        {
+            return doubleValue.ToString("N0");
+        }
+
+        return text.Trim();
+    }
+}
