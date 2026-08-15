@@ -1,0 +1,8 @@
+@page "/contract/edit"
+@page "/contract/edit/{Id:long}"
+@rendermode InteractiveServer
+<PageTitle>契約者マスタ異動データ修正</PageTitle>
+
+@code {
+    [Parameter] public long? Id { get; set; }
+}

@@ -1,0 +1,38 @@
+@* 共通検索フォーム *@
+@typeparam TModel
+
+<EditForm Model="Model" OnValidSubmit="OnSearch" class="search-form mb-3">
+    <div class="mock-card">
+        @if (HeaderContent is not null)
+        {
+            <div class="search-form__header">@HeaderContent</div>
+        }
+        else
+        {
+            <div class="search-form__header"><h5 class="mb-0">@Title</h5></div>
+        }
+        <div class="search-form__body">@ChildContent</div>
+        @if (FooterContent is not null)
+        {
+            <div class="search-form__footer">@FooterContent</div>
+        }
+        else
+        {
+            <div class="search-form__footer">
+                <button type="submit" class="mock-btn mock-btn--primary" disabled="@IsSearching">検索</button>
+                <button type="button" class="mock-btn" @onclick="OnClear" disabled="@IsSearching">クリア</button>
+            </div>
+        }
+    </div>
+</EditForm>
+
+@code {
+    [Parameter, EditorRequired] public TModel Model { get; set; } = default!;
+    [Parameter] public string Title { get; set; } = "検索条件";
+    [Parameter] public RenderFragment? ChildContent { get; set; }
+    [Parameter] public EventCallback OnSearch { get; set; }
+    [Parameter] public EventCallback OnClear { get; set; }
+    [Parameter] public bool IsSearching { get; set; }
+    [Parameter] public RenderFragment? HeaderContent { get; set; }
+    [Parameter] public RenderFragment? FooterContent { get; set; }
+}

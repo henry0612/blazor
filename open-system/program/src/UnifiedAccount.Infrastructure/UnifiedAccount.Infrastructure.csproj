@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\UnifiedAccount.Domain\UnifiedAccount.Domain.csproj" />
+    <ProjectReference Include="..\UnifiedAccount.Application\UnifiedAccount.Application.csproj" />
+  </ItemGroup>
+
+  <!--
+    シーオーリポーツ帳票クリエータの参照。
+    実行ライブラリ（Hos.DocCreator.dll）は製品版を tools\CoReportsLib\ へ同梱している。
+    2026-08-10 の製品版化まで体験版（Hos.DocCreator.Trial.dll）へのフォールバックを持っていたが、
+    体験版を同梱しなくなったため分岐を廃止した。
+    アセンブリ名がファイル名と異なるため、Reference の Include は DLL 名ではなくアセンブリ名を書く。
+    詳細は 151-開発環境構築手順書 §5.4.3 を参照。
+  -->
+  <ItemGroup>
+    <Reference Include="Hos.DocCreator">
+      <HintPath>..\..\tools\CoReportsLib\Hos.DocCreator.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <Reference Include="Hos.CnDraw">
+      <HintPath>..\..\tools\CoReportsLib\Hos.CnDraw.dll</HintPath>
+      <Private>true</Private>
+    </Reference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="10.0.7" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

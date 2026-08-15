@@ -1,0 +1,33 @@
+@* 共通ページヘッダー *@
+
+<div class="shared-page-header">
+    <div>
+        @if (!string.IsNullOrEmpty(Eyebrow))
+        {
+            <div class="shared-page-header__eyebrow">@Eyebrow</div>
+        }
+        <h1 class="shared-page-header__title">@Title</h1>
+        @if (!string.IsNullOrEmpty(Description))
+        {
+            <div class="text-muted small">@Description</div>
+        }
+        @if (ResultCount.HasValue)
+        {
+            <div class="text-muted small">検索結果: @ResultCount.Value 件</div>
+        }
+    </div>
+    @if (Actions != null)
+    {
+        <div class="shared-page-header__actions">
+            @Actions
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired] public string Title { get; set; } = string.Empty;
+    [Parameter] public string? Eyebrow { get; set; }
+    [Parameter] public string? Description { get; set; }
+    [Parameter] public int? ResultCount { get; set; }
+    [Parameter] public RenderFragment? Actions { get; set; }
+}

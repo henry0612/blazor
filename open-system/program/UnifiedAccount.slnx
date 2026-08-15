@@ -1,0 +1,15 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/UnifiedAccount.Application/UnifiedAccount.Application.csproj" />
+    <Project Path="src/UnifiedAccount.Batch/UnifiedAccount.Batch.csproj" />
+    <Project Path="src/UnifiedAccount.Domain/UnifiedAccount.Domain.csproj" />
+    <Project Path="src/UnifiedAccount.Infrastructure/UnifiedAccount.Infrastructure.csproj" />
+    <Project Path="src/UnifiedAccount.Reporting/UnifiedAccount.Reporting.csproj" />
+    <Project Path="src/UnifiedAccount.Web/UnifiedAccount.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/UnifiedAccount.Application.Tests/UnifiedAccount.Application.Tests.csproj" />
+    <Project Path="tests/UnifiedAccount.Domain.Tests/UnifiedAccount.Domain.Tests.csproj" />
+    <Project Path="tests/UnifiedAccount.Integration.Tests/UnifiedAccount.Integration.Tests.csproj" />
+  </Folder>
+</Solution>

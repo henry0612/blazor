@@ -1,0 +1,100 @@
+@page "/login"
+@attribute [AllowAnonymous]
+@rendermode InteractiveServer
+@using Microsoft.AspNetCore.Authentication
+@using Microsoft.AspNetCore.Authentication.Cookies
+@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@using UnifiedAccount.Application.DTOs
+@using UnifiedAccount.Application.Services
+
+@inject UnifiedAccount.Application.Services.IAuthenticationService AuthService
+@inject NavigationManager Navigation
+
+<PageTitle>ログイン — 統一口座振替システム</PageTitle>
+
+<div class="container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-header bg-primary text-white">
+                    <h5 class="mb-0">統一口座振替システム ログイン</h5>
+                </div>
+                <div class="card-body">
+
+                    @if (_errorMessage is not null)
+                    {
+                        <div class="alert alert-danger" role="alert">@_errorMessage</div>
+                    }
+
+                    <EditForm Model="Input!" method="post" OnValidSubmit="HandleLogin" FormName="login">
+                        <DataAnnotationsValidator />
+
+                        <div class="mb-3">
+                            <label class="form-label" for="userId">ユーザーID</label>
+                            <InputText id="userId" @bind-Value="Input!.UserId"
+                                       class="form-control" maxlength="20"
+                                       autocomplete="username" />
+                            <ValidationMessage For="() => Input!.UserId" class="text-danger small" />
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label" for="password">パスワード</label>
+                            <InputText id="password" type="password" @bind-Value="Input!.Password"
+                                       class="form-control"
+                                       autocomplete="current-password" />
+                            <ValidationMessage For="() => Input!.Password" class="text-danger small" />
+                        </div>
+
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">ログイン</button>
+                        </div>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    [CascadingParameter]
+    private HttpContext HttpContext { get; set; } = default!;
+
+    [SupplyParameterFromForm(FormName = "login")]
+    private LoginRequest? Input { get; set; }
+
+    private string? _errorMessage;
+
+    protected override void OnInitialized()
+    {
+        Input ??= new();
+        // 認証済みユーザーはホームへリダイレクト
+        if (HttpContext.User.Identity?.IsAuthenticated == true)
+        {
+            Navigation.NavigateTo("/", forceLoad: true);
+        }
+    }
+
+    private async Task HandleLogin()
+    {
+        if (Input is null) return;
+        var result = await AuthService.LoginAsync(Input.UserId, Input.Password);
+        if (result.IsSuccess)
+        {
+            // Claims の生成規則は 222 F-INF-001 §6 に従い、LoginClaimsFactory へ集約する。
+            var identity = LoginClaimsFactory.CreateIdentity(
+                result,
+                CookieAuthenticationDefaults.AuthenticationScheme);
+            await HttpContext.SignInAsync(
+                CookieAuthenticationDefaults.AuthenticationScheme,
+                new ClaimsPrincipal(identity));
+
+            // HTTP 302 リダイレクトで Cookie を反映（JS Runtime 非依存）
+            HttpContext.Response.Redirect("/", permanent: false);
+        }
+        else
+        {
+            _errorMessage = result.ErrorMessage;
+        }
+    }
+}

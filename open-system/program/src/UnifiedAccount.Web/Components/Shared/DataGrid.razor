@@ -1,0 +1,56 @@
+@* 共通データグリッド *@
+@typeparam TItem
+
+<div class="shared-data-grid">
+    @if (Items == null)
+    {
+        <div class="text-center py-4">
+            読み込み中...
+        </div>
+    }
+    else if (!Items.Any())
+    {
+        <div class="text-center py-4">
+            @EmptyMessage
+        </div>
+    }
+    else
+    {
+        <table class="mock-table">
+            <thead>
+                <tr>@HeaderContent</tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Items)
+                {
+                    <tr @onclick="() => OnRowClick.InvokeAsync(item)" 
+                        class="@(SelectedItem?.Equals(item) == true ? "table-active" : "")"
+                        style="cursor: pointer;">
+                        @RowContent(item)
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+        @if (TotalCount > 0 && ShowPagination)
+        {
+            <Pagination CurrentPage="CurrentPage" 
+                        TotalPages="TotalPages" 
+                        OnPageChanged="OnPageChanged" />
+        }
+    }
+</div>
+
+@code {
+    [Parameter] public IEnumerable<TItem>? Items { get; set; }
+    [Parameter] public RenderFragment? HeaderContent { get; set; }
+    [Parameter, EditorRequired] public RenderFragment<TItem> RowContent { get; set; } = default!;
+    [Parameter] public TItem? SelectedItem { get; set; }
+    [Parameter] public EventCallback<TItem> OnRowClick { get; set; }
+    [Parameter] public string EmptyMessage { get; set; } = "データが見つかりません。";
+    [Parameter] public int TotalCount { get; set; }
+    [Parameter] public bool ShowPagination { get; set; }
+    [Parameter] public int CurrentPage { get; set; } = 1;
+    [Parameter] public int TotalPages { get; set; } = 1;
+    [Parameter] public EventCallback<int> OnPageChanged { get; set; }
+}

@@ -1,0 +1,131 @@
+.app-shell {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) minmax(0, 1fr);
+    grid-template-rows: var(--header-height) minmax(0, 1fr);
+    height: 100vh;
+    background-color: var(--bg);
+    color: var(--fg);
+}
+
+.app-header {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    background-color: var(--surface);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    z-index: 10;
+}
+
+.app-header__left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.app-header__tweaks-button {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 4px;
+    border: 1px solid var(--accent);
+    background-color: var(--accent);
+    color: #fff;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.app-header__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--fg);
+}
+
+.app-header__version {
+    margin-left: 8px;
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--muted);
+}
+
+.app-header__right {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.app-header__updated {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.app-header__avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--border);
+    color: var(--fg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.sidebar {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: var(--surface);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+}
+
+.app-main {
+    grid-column: 2;
+    grid-row: 2;
+    min-height: 0;
+    min-width: 0;
+    background-color: var(--bg);
+    overflow-y: auto;
+}
+
+.app-main__body {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+@media (max-width: 960px) {
+    .app-shell {
+        grid-template-columns: 1fr;
+        grid-template-rows: var(--header-height) auto minmax(0, 1fr);
+    }
+
+    .sidebar {
+        grid-column: 1;
+        grid-row: 2;
+        border-bottom: 1px solid oklch(90% 0.008 240);
+    }
+
+    .app-main {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    .app-header {
+        flex-wrap: wrap;
+        height: auto;
+        padding: 8px 12px;
+        gap: 8px;
+    }
+
+    .app-header__right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

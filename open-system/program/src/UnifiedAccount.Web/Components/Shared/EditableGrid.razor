@@ -1,0 +1,36 @@
+@typeparam TItem
+
+<div class="editable-grid" data-component="editable-grid">
+    @if (Items is null || Items.Count == 0)
+    {
+        <div class="text-muted p-3">@EmptyMessage</div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="mock-table">
+                <thead><tr>@HeaderContent</tr></thead>
+                <tbody>
+                    @foreach (var item in Items)
+                    {
+                        <tr>@RowContent(item)</tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>
+
+@code {
+    [Parameter, EditorRequired]
+    public IReadOnlyList<TItem>? Items { get; set; }
+
+    [Parameter, EditorRequired]
+    public RenderFragment HeaderContent { get; set; } = default!;
+
+    [Parameter, EditorRequired]
+    public RenderFragment<TItem> RowContent { get; set; } = default!;
+
+    [Parameter]
+    public string EmptyMessage { get; set; } = "編集対象データがありません。";
+}

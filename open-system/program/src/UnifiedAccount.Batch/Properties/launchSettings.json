@@ -1,0 +1,8 @@
+﻿{
+  "profiles": {
+    "WS_Debug": {
+      "commandName": "Project",
+      "commandLineArgs": "--job BAT-KOZ024 --execution-id KOZ024-20260827-0001"
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.menu-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.menu-section {
+    padding: 0;
+}
+
+.menu-section-title {
+    padding: 16px 16px 8px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.menu-item {
+    font-size: 13px;
+}
+
+.menu-item ::deep .nav-link {
+    color: var(--fg);
+    background: transparent;
+    border: none;
+    border-left: 2px solid transparent;
+    border-radius: 4px;
+    min-height: 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    line-height: 1.2;
+    width: 100%;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.15s ease;
+}
+
+.menu-item ::deep .nav-link:hover {
+    background-color: var(--bg);
+    color: var(--fg);
+    text-decoration: none;
+}
+
+.menu-item ::deep a.active {
+    background-color: oklch(from var(--accent) l c h / 0.05);
+    color: var(--accent);
+    border-left-color: var(--accent);
+    font-weight: 500;
+}
+
+.menu-item--disabled {
+    color: var(--muted);
+    min-height: 32px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 8px;
+    opacity: 0.7;
+}
+
+.menu-icon {
+    display: inline-flex;
+    width: 12px;
+    height: 12px;
+    border-radius: 2px;
+    background-color: currentColor;
+    color: transparent;
+    flex-shrink: 0;
+}
+
+.menu-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+@media (max-width: 960px) {
+    .menu-nav {
+        padding: 0;
+    }
+}

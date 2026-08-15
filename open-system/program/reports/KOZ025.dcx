@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocCreatorConf version="5.0" xmlns="http://schema.hos.co.jp/dcx/5.0/" creationTime="2026-07-07T10:14:09+09:00">
+  <DocCreator>
+    <FileOutJob jobName="RSI_1">
+      <Document type="BINARY" />
+    </FileOutJob>
+  </DocCreator>
+  <MappingTool>
+    <Property name="FieldOrder">
+      <Value>
+        <Property name="フォーム1" value="Page,Details,DenkCode11,DenkCode12,DenkCode13,DenkCode14,DenkCode15,DenkCode16_19,ShoriYMD" />
+      </Value>
+    </Property>
+  </MappingTool>
+  <RecordSet name="DenkCode11" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <RecordSet name="DenkCode12" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <RecordSet name="DenkCode13" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <RecordSet name="DenkCode14" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <RecordSet name="DenkCode15" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <RecordSet name="DenkCode16_19" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <RecordSet name="Details" type="CSV" virtualStartIndex="10000" repeat="1">
+    <Property name="Delimiter" value="," />
+    <Property name="Header" value="True" />
+    <Property name="BlankLine" value="False" />
+    <Source valueAs="DATA" valueType="TEXT" value="Id,JobExecutionId,ProcessingDate,CompanyCode,DenkCode,IdokCode,MessageType,IsError,SequenceNo,CompanyNameKana,Tel,PostalCode,PrefectureName,CityName,Town1,Town2,WithdrawalDay1,WithdrawalDay2,WithdrawalDay3,WithdrawalDay4,ProcessingFlag,SheetFlag,ChangeCode,BasicFee,AdminFee,NewUnitPrice,ModifyUnitPrice,TransferUnitPrice1,TransferUnitPrice2,ReceiptUnitPrice,BankCode1,BranchCode1,AccountType1,AccountNo1,ClientCode,BankCode2,BranchCode2,AccountType2,AccountNo2,PassbookNo,CollectionCode,Cycle,OperatingYear,OperatingMonth,ItemName,Amount,CreatedAt,MessageTypeName,Bank1Account,Bank2Account,OperatingYM,ProcessingDateText,ChangeCodeString,BasicFeeString,AdminFeeString,NewUnitPriceString,ModifyUnitPriceString,Transfer1UnitPriceString,Transfer2UnitPriceString,ReceiptUnitPriceString" />
+  </RecordSet>
+  <Report name="レポート1">
+    <Form name="フォーム1" recordSet="Details" forcedOutput="FALSE">
+      <Layout valueAs="FILE" valueType="TEXT">KOZ025.cfx</Layout>
+      <Field name="Page" valueAs="DATA" valueType="TEMPLATE">$GET{CREATOR,CurrentPageCount}</Field>
+      <DetailList name="Details" direction="UTOD" recordSet="Details">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">MessageTypeName</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">DenkCode</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">IdokCode</Field>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">CompanyCode</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="DenkCode11" direction="UTOD" recordSet="DenkCode11">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">CompanyNameKana</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">Tel</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">PostalCode</Field>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">PrefectureName</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="DenkCode12" direction="UTOD" recordSet="DenkCode12">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">CityName</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">Town1</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">Town2</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="DenkCode13" direction="UTOD" recordSet="DenkCode13">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">WithdrawalDay1</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">WithdrawalDay2</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">WithdrawalDay3</Field>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">WithdrawalDay4</Field>
+          <Field index="4" valueAs="DATA" valueType="SOURCE">ProcessingFlag</Field>
+          <Field index="5" valueAs="DATA" valueType="SOURCE">SheetFlag</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="DenkCode14" direction="UTOD" recordSet="DenkCode14">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">ChangeCode</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">BasicFeeString</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">AdminFeeString</Field>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">NewUnitPriceString</Field>
+          <Field index="4" valueAs="DATA" valueType="SOURCE">ModifyUnitPriceString</Field>
+          <Field index="5" valueAs="DATA" valueType="SOURCE">Transfer1UnitPriceString</Field>
+          <Field index="6" valueAs="DATA" valueType="SOURCE">Transfer2UnitPriceString</Field>
+          <Field index="7" valueAs="DATA" valueType="SOURCE">ReceiptUnitPriceString</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="DenkCode15" direction="UTOD" recordSet="DenkCode15">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">Bank1Account</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">ClientCode</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">Bank2Account</Field>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">PassbookNo</Field>
+        </DetailItem>
+      </DetailList>
+      <DetailList name="DenkCode16_19" direction="UTOD" recordSet="DenkCode16_19">
+        <DetailItem>
+          <Field index="0" valueAs="DATA" valueType="SOURCE">CollectionCode</Field>
+          <Field index="1" valueAs="DATA" valueType="SOURCE">Cycle</Field>
+          <Field index="2" valueAs="DATA" valueType="SOURCE">OperatingYM</Field>
+          <Field index="3" valueAs="DATA" valueType="SOURCE">ItemName</Field>
+          <Field index="4" valueAs="DATA" valueType="SOURCE">Amount</Field>
+        </DetailItem>
+      </DetailList>
+      <Field name="ShoriYMD" valueAs="DATA" valueType="SOURCE">ProcessingDateText</Field>
+    </Form>
+  </Report>
+</DocCreatorConf>
