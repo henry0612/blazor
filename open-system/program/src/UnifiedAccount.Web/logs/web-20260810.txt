@@ -1,0 +1,241 @@
+2026-08-10 18:33:41.738 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:33:43.933 +09:00 [INF] Now listening on: http://localhost:5247
+2026-08-10 18:33:43.966 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 18:33:43.977 +09:00 [INF] Hosting environment: Development
+2026-08-10 18:33:43.986 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 18:34:55.037 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 18:34:55.383 +09:00 [INF] HTTP GET /login responded 200 in 281.2381 ms
+2026-08-10 18:34:55.851 +09:00 [INF] HTTP GET /login responded 200 in 28.6430 ms
+2026-08-10 18:35:04.358 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: Cannot convert string value 'Administrator' from the database to any value in the mapped 'UserRole' enum.
+   at lambda_method214(Closure, String)
+   at lambda_method213(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: Cannot convert string value 'Administrator' from the database to any value in the mapped 'UserRole' enum.
+   at lambda_method214(Closure, String)
+   at lambda_method213(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:35:04.375 +09:00 [ERR] HTTP POST /login responded 500 in 263.0113 ms
+System.InvalidOperationException: Cannot convert string value 'Administrator' from the database to any value in the mapped 'UserRole' enum.
+   at lambda_method214(Closure, String)
+   at lambda_method213(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.AuthenticationService.LoginAsync(String userId, String password, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\AuthenticationService.cs:line 39
+   at UnifiedAccount.Web.Components.Pages.Login.HandleLogin() in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Login.razor:line 81
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.Forms.EditForm.HandleSubmitAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+   at Microsoft.AspNetCore.Components.Endpoints.EndpointHtmlRenderer.<WaitForNonStreamingPendingTasks>g__Execute|58_0()
+   at Microsoft.AspNetCore.Components.Endpoints.RazorComponentEndpointInvoker.RenderComponentCore(HttpContext context)
+   at Microsoft.AspNetCore.Components.Endpoints.RazorComponentEndpointInvoker.RenderComponentCore(HttpContext context)
+   at Microsoft.AspNetCore.Components.Rendering.RendererSynchronizationContext.<>c.<<InvokeAsync>b__10_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Builder.ServerRazorComponentsEndpointConventionBuilderExtensions.<>c__DisplayClass1_1.<<AddInteractiveServerRenderMode>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-08-10 18:35:04.394 +09:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Cannot convert string value 'Administrator' from the database to any value in the mapped 'UserRole' enum.
+   at lambda_method214(Closure, String)
+   at lambda_method213(Closure, QueryContext, DbDataReader, ResultContext, SingleQueryResultCoordinator)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.AuthenticationService.LoginAsync(String userId, String password, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\AuthenticationService.cs:line 39
+   at UnifiedAccount.Web.Components.Pages.Login.HandleLogin() in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Login.razor:line 81
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.Forms.EditForm.HandleSubmitAsync()
+   at Microsoft.AspNetCore.Components.ComponentBase.CallStateHasChangedOnAsyncCompletion(Task task)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+   at Microsoft.AspNetCore.Components.RenderTree.Renderer.GetErrorHandledTask(Task taskToHandle, ComponentState owningComponentState)
+   at Microsoft.AspNetCore.Components.Endpoints.EndpointHtmlRenderer.<WaitForNonStreamingPendingTasks>g__Execute|58_0()
+   at Microsoft.AspNetCore.Components.Endpoints.RazorComponentEndpointInvoker.RenderComponentCore(HttpContext context)
+   at Microsoft.AspNetCore.Components.Endpoints.RazorComponentEndpointInvoker.RenderComponentCore(HttpContext context)
+   at Microsoft.AspNetCore.Components.Rendering.RendererSynchronizationContext.<>c.<<InvokeAsync>b__10_0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Builder.ServerRazorComponentsEndpointConventionBuilderExtensions.<>c__DisplayClass1_1.<<AddInteractiveServerRenderMode>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Antiforgery.Internal.AntiforgeryMiddleware.InvokeAwaited(HttpContext context)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2026-08-10 18:35:04.700 +09:00 [INF] HTTP GET /login responded 200 in 4.7634 ms
+2026-08-10 18:35:58.293 +09:00 [INF] Application is shutting down...
+2026-08-10 18:38:36.537 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:38:37.169 +09:00 [INF] Now listening on: http://localhost:5247
+2026-08-10 18:38:37.177 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 18:38:37.180 +09:00 [INF] Hosting environment: Development
+2026-08-10 18:38:37.181 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 18:38:53.123 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 18:38:53.392 +09:00 [INF] HTTP GET /login responded 200 in 240.1042 ms
+2026-08-10 18:38:53.879 +09:00 [INF] HTTP GET /login responded 200 in 45.9648 ms
+2026-08-10 18:39:00.673 +09:00 [INF] ログイン成功: ユーザーID=admin
+2026-08-10 18:39:00.691 +09:00 [INF] HTTP POST /login responded 302 in 372.8860 ms
+2026-08-10 18:39:00.712 +09:00 [INF] HTTP GET / responded 200 in 14.7591 ms
+2026-08-10 18:39:00.872 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 11.3108 ms
+2026-08-10 18:39:00.968 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 14.7946 ms
+2026-08-10 18:50:27.279 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:50:27.675 +09:00 [INF] Now listening on: http://localhost:5247
+2026-08-10 18:50:27.682 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 18:50:27.684 +09:00 [INF] Hosting environment: Development
+2026-08-10 18:50:27.685 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 18:50:34.790 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 18:50:35.116 +09:00 [INF] HTTP GET /login responded 200 in 275.9676 ms
+2026-08-10 18:50:35.644 +09:00 [INF] HTTP GET /login responded 200 in 46.3460 ms
+2026-08-10 18:50:39.779 +09:00 [INF] ログイン成功: ユーザーID=admin
+2026-08-10 18:50:39.805 +09:00 [INF] HTTP POST /login responded 302 in 330.9766 ms
+2026-08-10 18:50:39.834 +09:00 [INF] HTTP GET / responded 200 in 19.6853 ms
+2026-08-10 18:50:40.025 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 8.3536 ms
+2026-08-10 18:50:40.201 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 10.5288 ms
+2026-08-10 18:50:41.912 +09:00 [INF] HTTP GET /bank/master responded 200 in 118.4195 ms
+2026-08-10 18:50:44.619 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:50:44.623 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5D3:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 62
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:50:44.712 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:50:44.716 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5D3:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 63
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:50:53.886 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:50:53.891 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5D3:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 63
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:50:55.404 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:50:55.410 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5D3:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 63
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:53:22.751 +09:00 [INF] HTTP GET /login responded 200 in 10.6693 ms
+2026-08-10 18:53:23.029 +09:00 [INF] HTTP GET /login responded 200 in 2.9585 ms
+2026-08-10 18:57:10.050 +09:00 [INF] ログイン成功: ユーザーID=admin
+2026-08-10 18:57:10.056 +09:00 [INF] HTTP POST /login responded 302 in 199.9250 ms
+2026-08-10 18:57:10.064 +09:00 [INF] HTTP GET / responded 200 in 2.0511 ms
+2026-08-10 18:57:10.311 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.9359 ms
+2026-08-10 18:57:10.501 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 1.2289 ms
+2026-08-10 18:57:25.404 +09:00 [INF] HTTP GET /bank/master responded 200 in 11.5342 ms
+2026-08-10 18:57:25.464 +09:00 [INF] HTTP GET /_blazor responded 101 in 14931.0034 ms
+2026-08-10 18:57:25.500 +09:00 [INF] HTTP POST /_blazor/disconnect responded 200 in 56.3940 ms
+2026-08-10 18:57:25.527 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.4583 ms
+2026-08-10 18:57:25.578 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 0.4117 ms
+2026-08-10 18:58:19.190 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:58:19.195 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5DB:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 62
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:58:19.232 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:58:19.237 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5DB:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 63
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:58:58.556 +09:00 [INF] HTTP GET /_blazor responded 101 in 92929.7272 ms
+2026-08-10 18:59:23.716 +09:00 [INF] HTTP GET /login responded 302 in 6.5930 ms
+2026-08-10 18:59:23.734 +09:00 [INF] HTTP GET / responded 200 in 6.2398 ms
+2026-08-10 18:59:24.119 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.1327 ms
+2026-08-10 18:59:24.168 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 0.3816 ms
+2026-08-10 18:59:39.801 +09:00 [INF] HTTP POST /api/auth/logout responded 302 in 62.7978 ms
+2026-08-10 18:59:39.847 +09:00 [INF] HTTP GET /login responded 200 in 3.1762 ms
+2026-08-10 18:59:39.873 +09:00 [INF] HTTP GET /_blazor responded 101 in 15669.5890 ms
+2026-08-10 18:59:39.945 +09:00 [INF] HTTP GET /login responded 200 in 4.9178 ms
+2026-08-10 18:59:39.993 +09:00 [INF] HTTP GET /login responded 200 in 3.3070 ms
+2026-08-10 18:59:46.340 +09:00 [INF] ログイン成功: ユーザーID=admin
+2026-08-10 18:59:46.348 +09:00 [INF] HTTP POST /login responded 302 in 282.8026 ms
+2026-08-10 18:59:46.359 +09:00 [INF] HTTP GET / responded 200 in 2.3950 ms
+2026-08-10 18:59:46.455 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.2394 ms
+2026-08-10 18:59:46.516 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 0.4984 ms
+2026-08-10 18:59:49.392 +09:00 [INF] HTTP GET /bank/master responded 200 in 8.3507 ms
+2026-08-10 18:59:49.415 +09:00 [INF] HTTP GET /_blazor responded 101 in 2872.3579 ms
+2026-08-10 18:59:49.419 +09:00 [INF] HTTP POST /_blazor/disconnect responded 200 in 3.1178 ms
+2026-08-10 18:59:49.499 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.1332 ms
+2026-08-10 18:59:49.556 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 1.0393 ms
+2026-08-10 18:59:53.157 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:59:53.164 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5DG:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Infrastructure.Internal.ConcurrencyDetector.EnterCriticalSection()
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 62
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 18:59:53.214 +09:00 [ERR] An exception occurred while iterating over the results of a query for context type 'UnifiedAccount.Infrastructure.Persistence.AppDbContext'.
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+2026-08-10 18:59:53.221 +09:00 [ERR] 銀行の検索失敗。相関ID=0HNNMOJ9DG5DG:00000001 ユーザーID=admin 操作種別=検索ボタン押下 金融機関コード=null 支店コード=null
+System.InvalidOperationException: A second operation was started on this context instance before a previous operation completed. This is usually caused by different threads concurrently using the same instance of DbContext. For more information on how to avoid threading issues with DbContext, see https://go.microsoft.com/fwlink/?linkid=2097913.
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at UnifiedAccount.Infrastructure.Services.BankBranchService.SearchAsync(String bankCode, String branchCode, Int32 page, Int32 pageSize, CancellationToken ct) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Infrastructure\Services\BankBranchService.cs:line 63
+   at UnifiedAccount.Web.Components.Pages.Bank.BankMaster.LoadItemsAsync(GridItemsProviderRequest`1 request) in C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web\Components\Pages\Bank\BankMaster.razor.cs:line 199
+2026-08-10 19:01:32.505 +09:00 [INF] HTTP GET /_blazor responded 101 in 652259.7717 ms

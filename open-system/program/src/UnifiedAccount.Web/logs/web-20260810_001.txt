@@ -1,0 +1,130 @@
+2026-08-10 18:53:05.066 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:53:05.635 +09:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5247: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: 通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます。
+ ---> System.Net.Sockets.SocketException (10048): 通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-08-10 18:54:10.034 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:54:10.635 +09:00 [ERR] Hosting failed to start
+System.IO.IOException: Failed to bind to address http://127.0.0.1:5247: address already in use.
+ ---> Microsoft.AspNetCore.Connections.AddressInUseException: 通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます。
+ ---> System.Net.Sockets.SocketException (10048): 通常、各ソケット アドレスに対してプロトコル、ネットワーク アドレス、またはポートのどれか 1 つのみを使用できます。
+   at System.Net.Sockets.Socket.UpdateStatusAfterSocketErrorAndThrowException(SocketError error, Boolean disconnectOnFailure, String callerName)
+   at System.Net.Sockets.Socket.DoBind(EndPoint endPointSnapshot, SocketAddress socketAddress)
+   at System.Net.Sockets.Socket.Bind(EndPoint localEP)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportOptions.CreateDefaultBoundListenSocket(EndPoint endpoint)
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketConnectionListener.Bind()
+   at Microsoft.AspNetCore.Server.Kestrel.Transport.Sockets.SocketTransportFactory.BindAsync(EndPoint endpoint, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.Infrastructure.TransportManager.BindAsync(EndPoint endPoint, ConnectionDelegate connectionDelegate, EndpointConfig endpointConfig, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.<>c__DisplayClass28_0`1.<<StartAsync>g__OnBind|0>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   --- End of inner exception stack trace ---
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.BindEndpointAsync(ListenOptions endpoint, AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.LocalhostListenOptions.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.Internal.AddressBinder.AddressesStrategy.BindAsync(AddressBindContext context, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.BindAsync(CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Server.Kestrel.Core.KestrelServerImpl.StartAsync[TContext](IHttpApplication`1 application, CancellationToken cancellationToken)
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+   at Microsoft.Extensions.Hosting.Internal.Host.<StartAsync>b__14_1(IHostedService service, CancellationToken token)
+   at Microsoft.Extensions.Hosting.Internal.Host.ForeachService[T](IEnumerable`1 services, CancellationToken token, Boolean concurrent, Boolean abortOnFirstException, List`1 exceptions, Func`3 operation)
+2026-08-10 18:54:41.514 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:54:42.720 +09:00 [INF] Now listening on: http://127.0.0.1:5255
+2026-08-10 18:54:42.743 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 18:54:42.747 +09:00 [INF] Hosting environment: Production
+2026-08-10 18:54:42.751 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 18:54:51.915 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 18:54:52.272 +09:00 [INF] HTTP GET /login responded 200 in 296.1629 ms
+2026-08-10 18:54:52.400 +09:00 [INF] HTTP GET /login responded 200 in 75.8562 ms
+2026-08-10 18:54:52.400 +09:00 [INF] HTTP GET /login responded 200 in 76.2237 ms
+2026-08-10 18:55:05.161 +09:00 [WRN] ログイン失敗: ユーザーID=admin のパスワード不一致
+2026-08-10 18:55:05.179 +09:00 [INF] HTTP POST /login responded 200 in 5087.4712 ms
+2026-08-10 18:55:05.244 +09:00 [INF] HTTP GET /login responded 200 in 6.0352 ms
+2026-08-10 18:55:05.303 +09:00 [INF] HTTP GET /login responded 200 in 5.2614 ms
+2026-08-10 18:55:37.646 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 18:55:38.069 +09:00 [INF] Now listening on: http://127.0.0.1:5255
+2026-08-10 18:55:38.080 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 18:55:38.081 +09:00 [INF] Hosting environment: Development
+2026-08-10 18:55:38.082 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 18:55:54.189 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 18:55:54.472 +09:00 [INF] HTTP GET /login responded 200 in 231.0261 ms
+2026-08-10 18:55:54.707 +09:00 [INF] HTTP GET /login responded 200 in 18.2155 ms
+2026-08-10 18:56:00.332 +09:00 [WRN] ログイン失敗: ユーザーID=admin のパスワード不一致
+2026-08-10 18:56:00.345 +09:00 [INF] HTTP POST /login responded 200 in 396.3707 ms
+2026-08-10 18:56:00.460 +09:00 [INF] HTTP GET /login responded 200 in 14.1743 ms
+2026-08-10 19:05:34.306 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 19:05:34.849 +09:00 [INF] Now listening on: http://localhost:5247
+2026-08-10 19:05:34.859 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 19:05:34.863 +09:00 [INF] Hosting environment: Development
+2026-08-10 19:05:34.867 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 19:05:43.900 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 19:05:44.382 +09:00 [INF] HTTP GET /login responded 302 in 401.9775 ms
+2026-08-10 19:05:44.631 +09:00 [INF] HTTP GET / responded 200 in 219.4555 ms
+2026-08-10 19:05:45.149 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 16.5405 ms
+2026-08-10 19:05:45.257 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 30.9807 ms
+2026-08-10 19:05:49.311 +09:00 [INF] HTTP GET /bank/master responded 200 in 171.5282 ms
+2026-08-10 19:05:49.366 +09:00 [INF] HTTP GET /_blazor responded 101 in 4008.2905 ms
+2026-08-10 19:05:49.384 +09:00 [INF] HTTP POST /_blazor/disconnect responded 200 in 56.0415 ms
+2026-08-10 19:05:49.427 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.9444 ms
+2026-08-10 19:05:49.473 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 0.9112 ms
+2026-08-10 19:08:35.206 +09:00 [INF] 統一口座振替Webアプリ起動
+2026-08-10 19:08:36.027 +09:00 [INF] Now listening on: http://localhost:5247
+2026-08-10 19:08:36.039 +09:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-10 19:08:36.041 +09:00 [INF] Hosting environment: Development
+2026-08-10 19:08:36.043 +09:00 [INF] Content root path: C:\Dev\source\統一口座\UnifiedAccountTransfer-dev\open-system\program\src\UnifiedAccount.Web
+2026-08-10 19:08:50.167 +09:00 [WRN] Failed to determine the https port for redirect.
+2026-08-10 19:08:50.448 +09:00 [INF] HTTP GET /login responded 200 in 222.2584 ms
+2026-08-10 19:08:50.858 +09:00 [INF] HTTP GET /login responded 200 in 25.3374 ms
+2026-08-10 19:08:59.220 +09:00 [INF] ログイン成功: ユーザーID=admin
+2026-08-10 19:08:59.238 +09:00 [INF] HTTP POST /login responded 302 in 390.9394 ms
+2026-08-10 19:08:59.256 +09:00 [INF] HTTP GET / responded 200 in 10.9634 ms
+2026-08-10 19:08:59.369 +09:00 [INF] HTTP GET /_blazor/initializers responded 200 in 7.4873 ms
+2026-08-10 19:08:59.390 +09:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 4.3765 ms
+2026-08-10 19:09:00.717 +09:00 [INF] HTTP GET /bank/master responded 200 in 130.3498 ms
+2026-08-10 19:09:40.503 +09:00 [INF] HTTP GET /bank/edit/0543/201 responded 200 in 54.1327 ms
+2026-08-10 19:10:33.140 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:10:33.143 +09:00 [INF] HTTP GET /code-settings responded 200 in 424.2534 ms
+2026-08-10 19:10:33.168 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:10.253 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:10.259 +09:00 [INF] HTTP GET /code-settings responded 200 in 39.9096 ms
+2026-08-10 19:11:13.258 +09:00 [INF] HTTP GET /bank/master responded 200 in 12.0058 ms
+2026-08-10 19:11:14.372 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:14.377 +09:00 [INF] HTTP GET /code-settings responded 200 in 15.4165 ms
+2026-08-10 19:11:14.400 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:17.305 +09:00 [INF] HTTP GET /code-settings/AccountType responded 200 in 50.9450 ms
+2026-08-10 19:11:21.033 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:21.037 +09:00 [INF] HTTP GET /code-settings responded 200 in 15.9265 ms
+2026-08-10 19:11:21.051 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:29.058 +09:00 [INF] HTTP GET /code-settings/AccountType responded 200 in 20.2846 ms
+2026-08-10 19:11:35.154 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:35.157 +09:00 [INF] HTTP GET /code-settings responded 200 in 21.7725 ms
+2026-08-10 19:11:35.170 +09:00 [INF] 操作監査ログを登録しました: FeatureId=F-ONL-100, Action=Search, TargetType=CodeSetting
+2026-08-10 19:11:36.149 +09:00 [INF] HTTP GET /bank/master responded 200 in 6.5278 ms
+2026-08-10 19:11:39.325 +09:00 [INF] HTTP GET /bank/edit/0001/001 responded 200 in 15.1047 ms
+2026-08-10 19:13:03.704 +09:00 [INF] HTTP GET /bank/master responded 200 in 5.6226 ms
+2026-08-10 19:13:15.731 +09:00 [INF] HTTP GET /bank/edit/new responded 200 in 3.2845 ms
+2026-08-10 19:13:17.849 +09:00 [INF] HTTP GET /bank/master responded 200 in 12.5967 ms
+2026-08-10 19:13:38.422 +09:00 [INF] HTTP GET /_blazor responded 101 in 279020.3947 ms
+2026-08-10 19:16:05.514 +09:00 [INF] Application is shutting down...

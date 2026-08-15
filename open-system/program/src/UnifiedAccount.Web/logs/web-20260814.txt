@@ -1,0 +1,29 @@
+2026-08-14 13:28:39.648 +08:00 [INF] 統一口座振替Webアプリ起動
+2026-08-14 13:28:40.328 +08:00 [INF] Now listening on: https://localhost:7175
+2026-08-14 13:28:40.331 +08:00 [INF] Now listening on: http://localhost:5247
+2026-08-14 13:28:40.364 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-14 13:28:40.371 +08:00 [INF] Hosting environment: Development
+2026-08-14 13:28:40.371 +08:00 [INF] Content root path: C:\NL-26-019_統一口座システム再構築\0立案区\4資料\5お客様からの資料\NTL\open-system\program\src\UnifiedAccount.Web
+2026-08-14 13:28:41.350 +08:00 [INF] HTTP GET /login responded 200 in 242.2919 ms
+2026-08-14 13:28:41.480 +08:00 [INF] HTTP GET /login responded 200 in 7.8656 ms
+2026-08-14 13:29:45.879 +08:00 [INF] 統一口座振替Webアプリ起動
+2026-08-14 13:29:46.210 +08:00 [INF] Now listening on: https://localhost:7175
+2026-08-14 13:29:46.213 +08:00 [INF] Now listening on: http://localhost:5247
+2026-08-14 13:29:46.239 +08:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-08-14 13:29:46.241 +08:00 [INF] Hosting environment: Development
+2026-08-14 13:29:46.241 +08:00 [INF] Content root path: C:\NL-26-019_統一口座システム再構築\0立案区\4資料\5お客様からの資料\NTL\open-system\program\src\UnifiedAccount.Web
+2026-08-14 13:29:47.037 +08:00 [INF] HTTP GET /login responded 200 in 197.5364 ms
+2026-08-14 13:29:47.097 +08:00 [INF] HTTP GET /login responded 200 in 10.4285 ms
+2026-08-14 13:30:45.261 +08:00 [INF] ログイン成功: ユーザーID=admin
+2026-08-14 13:30:45.274 +08:00 [INF] HTTP POST /login responded 302 in 167.8371 ms
+2026-08-14 13:30:45.288 +08:00 [INF] HTTP GET / responded 200 in 8.2254 ms
+2026-08-14 13:30:45.348 +08:00 [INF] HTTP GET /_blazor/initializers responded 200 in 5.9581 ms
+2026-08-14 13:30:45.365 +08:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 9.9677 ms
+2026-08-14 13:31:05.695 +08:00 [INF] HTTP GET /bank/master responded 200 in 142.7516 ms
+2026-08-14 13:31:42.679 +08:00 [INF] HTTP GET /bank/master responded 200 in 4.0487 ms
+2026-08-14 13:31:42.773 +08:00 [INF] HTTP GET /_blazor/initializers responded 200 in 0.1619 ms
+2026-08-14 13:31:42.789 +08:00 [INF] HTTP POST /_blazor/negotiate responded 200 in 0.3413 ms
+2026-08-14 13:31:42.789 +08:00 [INF] HTTP CONNECT /_blazor responded 200 in 57416.2835 ms
+2026-08-14 13:31:42.790 +08:00 [INF] HTTP POST /_blazor/disconnect responded 200 in 98.2861 ms
+2026-08-14 13:37:57.443 +08:00 [INF] HTTP POST /_blazor/disconnect responded 200 in 1.6279 ms
+2026-08-14 13:37:57.476 +08:00 [INF] HTTP CONNECT /_blazor responded 200 in 374680.4913 ms
